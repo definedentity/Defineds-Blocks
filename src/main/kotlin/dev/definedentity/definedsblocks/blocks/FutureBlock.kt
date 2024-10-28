@@ -76,6 +76,6 @@ class FutureBlock :
     }
 
     fun isFutureBlock(level: LevelAccessor, x: Int, y: Int, z: Int): Boolean {
-        return level.getBlockState(BlockPos(x, y, z)).`is`(DBBlocks.BLOCKS.get(ID))
+        return level.getBlockState(BlockPos(x, y, z)).`is`(DBBlocks.BLOCKS.get(ID)!!)
     }
 }
