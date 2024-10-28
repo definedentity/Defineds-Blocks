@@ -7,4 +7,38 @@ pluginManagement {
 		mavenCentral()
 		gradlePluginPortal()
 	}
+
+	plugins {
+		id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+	}
 }
+
+dependencyResolutionManagement {
+	repositories {
+		mavenCentral()
+	}
+
+	versionCatalogs {
+		def shadowVersion = "8.3.3"
+		def spotlessVersion = "6.25.0"
+		def macheteVersion = "1.+"
+		def fabricLoomVersion = "1.8-SNAPSHOT"
+		def kotlinVersion = "2.0.21"
+
+		libs {
+			def fabric = version("fabric", fabricLoomVersion)
+			plugin("fabric", "fabric-loom").versionRef(fabric)
+
+			def kotlin = version("kotlin", kotlinVersion)
+			plugin("kotlin", "org.jetbrains.kotlin.jvm").versionRef(kotlin)
+
+            def spotless = version("spotless", spotlessVersion)
+            plugin("spotless", "com.diffplug.spotless").versionRef(spotless)
+
+			def machete = version("machete", macheteVersion)
+            plugin("machete", "io.github.p03w.machete").versionRef(machete)
+		}
+	}
+}
+
+rootProject.name = "defineds-blocks"

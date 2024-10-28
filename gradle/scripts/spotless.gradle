@@ -1,0 +1,19 @@
+spotless {
+	encoding "UTF-8"
+
+	kotlin {
+		target 'src/main/kotlin/**/*.kt'
+
+		toggleOffOn()
+		endWithNewline()
+		indentWithTabs()
+		ktfmt().kotlinlangStyle().configure { it.setRemoveUnusedImport(true) }
+	}
+
+	format("dotfiles") {
+		target(".gitignore", ".gitattributes", ".editorconfig")
+		trimTrailingWhitespace()
+        indentWithSpaces(4)
+        endWithNewline()
+	}
+}

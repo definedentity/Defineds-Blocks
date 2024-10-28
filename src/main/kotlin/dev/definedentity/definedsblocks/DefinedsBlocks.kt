@@ -1,15 +1,27 @@
 package dev.definedentity.definedsblocks
 
+import dev.definedentity.definedsblocks.blocks.DBBlocks
+import dev.definedentity.definedsblocks.blocks.FutureBlock
+import dev.definedentity.definedsblocks.items.DBItems
+import dev.definedentity.definedsblocks.utils.DBIdentifier
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
 import org.slf4j.LoggerFactory
 
-object DefinedsBlocks : ModInitializer {
-    private val logger = LoggerFactory.getLogger("definedsblocks")
+class DefinedsBlocks : ModInitializer {
+    companion object {
+        val MOD_ID = "definedsblocks"
+        val MOD_NAME = "Defined's Blocks"
+        val LOGGER = LoggerFactory.getLogger(MOD_NAME)
 
-	override fun onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-		logger.info("Hello Fabric world!")
-	}
+        val ITEM_GROUP =
+            FabricItemGroupBuilder.build(DBIdentifier("general")) {
+                DBBlocks.BLOCKS.get(FutureBlock.ID)!!.asItem().defaultInstance
+            }
+    }
+
+    override fun onInitialize() {
+        DBItems.init()
+        DBBlocks.init()
+    }
 }

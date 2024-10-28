@@ -1,0 +1,21 @@
+base {
+	archivesName = project.archives_base_name
+}
+
+machete {
+    enabled = Boolean.getBoolean("PUBLISHING")
+}
+
+afterEvaluate {
+    tasks.withType(org.gradle.jvm.tasks.Jar).configureEach {
+          manifest.attributes([
+                'MixinConfigs': 'definedsblocks.mixins.json',
+                'Specification-Title': project.name,
+                'Specification-Version': mod_version,
+                'Specification-Vendor': 'definedentity',
+                'Implementation-Title': base.archivesName,
+                'Implementation-Version': version,
+                'Implementation-Vendor': 'definedentity',
+        ])
+    }
+}

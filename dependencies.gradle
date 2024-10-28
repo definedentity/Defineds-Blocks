@@ -1,0 +1,34 @@
+dependencies {
+	setup(dependencies)
+	devEnv(dependencies)
+	modDeps(dependencies)
+	recipeViewer(dependencies)
+}
+
+def recipeViewer(DependencyHandler deps) {
+	deps.modLocalRuntime("me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}")
+}
+
+def modDeps(DependencyHandler deps) {
+	deps.modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	deps.modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+}
+
+def devEnv(DependencyHandler deps) {
+	deps.modLocalRuntime("maven.modrinth:lazydfu:${lazydfu_version}")
+	deps.modLocalRuntime("com.terraformersmc:modmenu:${modmenu_version}")
+	deps.modLocalRuntime("maven.modrinth:ctm-refabricated:${ctm_refabricated_version}")
+	//deps.modLocalRuntime("maven.modrinth:continuity:2.0.2+1.18.2")
+}
+
+def setup(DependencyHandler deps) {
+	deps.minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+	deps.mappings(loom.layered {
+        it.mappings("org.quiltmc:quilt-mappings:$minecraft_version+build.$qm_version:intermediary-v2")
+        it.parchment("org.parchmentmc.data:parchment-$minecraft_version:$parchment_version@zip")
+        it.officialMojangMappings { nameSyntheticMembers = false }
+    })
+
+	deps.modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+}
