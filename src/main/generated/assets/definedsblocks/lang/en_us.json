@@ -1,4 +1,5 @@
 {
   "block.definedsblocks.future_block": "Future Block",
-  "block.definedsblocks.undefined_block": "Undefined Block"
+  "block.definedsblocks.undefined_block": "Undefined Block",
+  "itemGroup.definedsblocks.general": "Defined\u0027s Blocks"
 }

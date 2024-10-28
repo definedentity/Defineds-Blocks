@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	alias libs.plugins.fabric
 	alias libs.plugins.kotlin
-	alias libs.plugins.machete
 	alias libs.plugins.spotless
 
 	id 'maven-publish'

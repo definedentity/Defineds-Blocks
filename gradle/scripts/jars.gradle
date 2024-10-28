@@ -2,10 +2,6 @@ base {
 	archivesName = project.archives_base_name
 }
 
-machete {
-    enabled = Boolean.getBoolean("PUBLISHING")
-}
-
 afterEvaluate {
     tasks.withType(org.gradle.jvm.tasks.Jar).configureEach {
           manifest.attributes([
