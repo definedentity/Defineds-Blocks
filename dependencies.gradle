@@ -24,11 +24,11 @@ def devEnv(DependencyHandler deps) {
 def setup(DependencyHandler deps) {
 	deps.minecraft "com.mojang:minecraft:${project.minecraft_version}"
 
-	deps.mappings(loom.layered {
-        it.mappings("org.quiltmc:quilt-mappings:$minecraft_version+build.$qm_version:intermediary-v2")
-        it.parchment("org.parchmentmc.data:parchment-$minecraft_version:$parchment_version@zip")
-        it.officialMojangMappings { nameSyntheticMembers = false }
-    })
+	deps.mappings loom.layered() {
+		officialMojangMappings()
+		parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+	}
+
 
 	deps.modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 }
