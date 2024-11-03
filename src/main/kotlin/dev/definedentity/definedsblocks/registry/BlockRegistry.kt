@@ -1,14 +1,17 @@
 package dev.definedentity.definedsblocks.registry
 
+import com.tterrag.registrate.util.DataIngredient
 import com.tterrag.registrate.util.entry.BlockEntry
 import dev.definedentity.definedsblocks.DefinedsBlocks
 import dev.definedentity.definedsblocks.DefinedsBlocks.Companion.REGISTRATE
+import dev.definedentity.definedsblocks.blocks.DBBlocks
 import dev.definedentity.definedsblocks.utils.DBIdentifier
 import dev.definedentity.definedsblocks.utils.TextFormatting
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.core.Registry
+import net.minecraft.data.recipes.SingleItemRecipeBuilder.stonecutting
 import net.minecraft.world.item.BlockItem
-import net.minecraft.world.item.crafting.StonecutterRecipe
+import net.minecraft.world.item.crafting.Ingredient
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.RotatedPillarBlock
 import net.minecraft.world.level.block.SlabBlock
@@ -24,7 +27,7 @@ object BlockRegistry {
                 ctx.get(),
                 prov.modLoc("block/${name}"),
             )
-        }).register()
+        }).recipe { ctx, prov -> prov.stonecutting(DataIngredient.stacks(DBBlocks.UNDEFINED_BLOCK.get().asItem().defaultInstance)) { ctx.get() } }.register()
     }
 
     fun <T : StairBlock> stairs(
@@ -40,7 +43,7 @@ object BlockRegistry {
             prov.logBlock(
                 ctx.get()
             )
-        }).register()
+        }).recipe { ctx, prov -> prov.stonecutting(DataIngredient.stacks(DBBlocks.UNDEFINED_BLOCK.get().asItem().defaultInstance)) { ctx.get() } }.register()
     }
 
     fun <T : RotatedPillarBlock> log(
@@ -60,7 +63,7 @@ object BlockRegistry {
             prov.slabBlock(
                 ctx.get(), prov.modLoc("block/${fullBlockTexture}"), prov.modLoc("block/${slabTexture}")
             )
-        }).register()
+        }).recipe { ctx, prov -> prov.stonecutting(DataIngredient.stacks(DBBlocks.UNDEFINED_BLOCK.get().asItem().defaultInstance)) { ctx.get() } }.register()
     }
 
     fun <T : SlabBlock> slab(
@@ -73,7 +76,7 @@ object BlockRegistry {
         name: String, englishName: String, blockSupplier: (BlockBehaviour.Properties) -> T
     ): BlockEntry<T> {
         return REGISTRATE.block(name, blockSupplier).lang(englishName).simpleItem()
-            .recipe { ctx, prov -> StonecutterRecipe() }.register()
+            .recipe { ctx, prov -> prov.stonecutting(DataIngredient.stacks(DBBlocks.UNDEFINED_BLOCK.get().asItem().defaultInstance)) { ctx.get() } }.register()
     }
 
     fun <T : Block> block(
