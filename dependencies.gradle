@@ -12,6 +12,12 @@ def recipeViewer(DependencyHandler deps) {
 def modDeps(DependencyHandler deps) {
 	deps.modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	deps.modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+
+	deps.modApi(deps.include("io.github.fabricators_of_create:Porting-Lib:$port_lib_version+$minecraft_version"))
+    deps.modApi(deps.include("com.tterrag.registrate_fabric:Registrate:$registrate_version")) {
+        exclude(group: "io.github.fabricators_of_create")
+    }
+    deps.modApi(deps.include("me.alphamode:ForgeTags:$forge_tags_version"))
 }
 
 def devEnv(DependencyHandler deps) {

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "definedsblocks:block/polished_livingrock_slab_top"
+    },
+    "type=bottom": {
+      "model": "definedsblocks:block/polished_livingrock_slab"
+    },
+    "type=double": {
+      "model": "definedsblocks:block/polished_livingrock"
+    }
+  }
+}

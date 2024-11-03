@@ -1,10 +1,10 @@
 package dev.definedentity.definedsblocks.client
 
 import dev.definedentity.definedsblocks.blocks.DBBlocks
-import dev.definedentity.definedsblocks.blocks.FutureBlock
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
 import net.minecraft.client.renderer.RenderType
+import net.minecraft.world.level.block.Block
 
 class DefinedsBlocksClient : ClientModInitializer {
     override fun onInitializeClient() {
@@ -12,7 +12,7 @@ class DefinedsBlocksClient : ClientModInitializer {
     }
 
     fun renderTranslucentBlock() {
-        val blocks = listOf(DBBlocks.BLOCKS.get(FutureBlock.ID))
+        val blocks = listOf<Block>(DBBlocks.FUTURE_BLOCK)
 
         blocks.forEach { BlockRenderLayerMap.INSTANCE.putBlock(it, RenderType.translucent()) }
     }
