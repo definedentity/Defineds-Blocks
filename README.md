@@ -8,10 +8,12 @@ This is a fabric mod that adds a bunch of my favourite blocks.
 
 - Undefined block: the primary block which will be used to craft Defined's blocks in a stonecutter
 - Future block: Fake AE2 controller block, good for decorating
+- Livingwood, livingrock, etc. from Botania
 
 ## Credits
-
-- This mod use textures from [Applied-Energistics-2](https://github.com/AppliedEnergistics/Applied-Energistics-2) for Future block
+This mod use textures from:
+- [Applied-Energistics-2](https://github.com/AppliedEnergistics/Applied-Energistics-2)
+- [Botania](https://github.com/VazkiiMods/Botania)
 
 ## License
 
