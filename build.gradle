@@ -5,8 +5,9 @@ plugins {
 	alias libs.plugins.kotlin
 	alias libs.plugins.spotless
 	alias libs.plugins.machete
+	alias libs.plugins.minotaur
 
-	id 'maven-publish'
+	id "maven-publish"
 	id "idea"
 }
 
@@ -26,6 +27,7 @@ apply from: "$rootDir/gradle/scripts/repositories.gradle"
 apply from: "dependencies.gradle"
 apply from: "$rootDir/gradle/scripts/resources.gradle"
 apply from: "$rootDir/gradle/scripts/jars.gradle"
+apply from: "$rootDir/gradle/scripts/publishing.gradle"
 apply from: "$rootDir/gradle/scripts/spotless.gradle"
 
 // Java
