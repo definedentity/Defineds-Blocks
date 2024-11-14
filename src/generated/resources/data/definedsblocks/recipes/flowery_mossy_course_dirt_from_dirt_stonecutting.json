@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:dirt"
+  },
+  "result": "definedsblocks:flowery_mossy_course_dirt",
+  "count": 1
+}

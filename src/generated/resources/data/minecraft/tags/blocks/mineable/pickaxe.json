@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "definedsblocks:mossier_stone_bricks",
+    "definedsblocks:flowery_mossy_stone_bricks",
+    "definedsblocks:flowery_mossier_stone_bricks",
+    "definedsblocks:mossy_deepslate_tiles",
+    "definedsblocks:flowery_mossy_deepslate_tiles",
+    "definedsblocks:mossy_deepslate_bricks",
+    "definedsblocks:flowery_mossy_deepslate_bricks"
+  ]
+}

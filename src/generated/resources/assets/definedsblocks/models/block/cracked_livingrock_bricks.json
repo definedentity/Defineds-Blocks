@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "definedsblocks:block/cracked_livingrock_bricks"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "definedsblocks:undefined_block"
-  },
-  "result": "definedsblocks:cracked_livingrock_bricks",
-  "count": 1
-}

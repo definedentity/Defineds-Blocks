@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "type=block": { "model": "definedsblocks:block/future_block/future_block_online" },
-    "type=column_z": { "model": "definedsblocks:block/future_block/future_block_column_online", "x": 90 },
-    "type=column_y":  { "model": "definedsblocks:block/future_block/future_block_column_online" },
-    "type=column_x":  { "model": "definedsblocks:block/future_block/future_block_column_online","x":90, "y": 90 }
-  }
-}

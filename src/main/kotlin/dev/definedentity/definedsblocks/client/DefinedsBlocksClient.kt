@@ -12,7 +12,7 @@ class DefinedsBlocksClient : ClientModInitializer {
     }
 
     fun renderTranslucentBlock() {
-        val blocks = listOf<Block>(DBBlocks.FUTURE_BLOCK)
+        val blocks = listOf<Block>()
 
         blocks.forEach { BlockRenderLayerMap.INSTANCE.putBlock(it, RenderType.translucent()) }
     }

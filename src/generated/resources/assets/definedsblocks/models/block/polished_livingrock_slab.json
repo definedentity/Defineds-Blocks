@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "side": "definedsblocks:block/polished_livingrock_slab",
-    "bottom": "definedsblocks:block/polished_livingrock_slab",
-    "top": "definedsblocks:block/polished_livingrock_slab"
-  }
-}

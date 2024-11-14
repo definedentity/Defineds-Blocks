@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "definedsblocks:undefined_block"
-  },
-  "result": "definedsblocks:dreamwood_planks",
-  "count": 1
-}

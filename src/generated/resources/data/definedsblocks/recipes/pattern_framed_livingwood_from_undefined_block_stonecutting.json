@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "definedsblocks:undefined_block"
-  },
-  "result": "definedsblocks:pattern_framed_livingwood",
-  "count": 1
-}
