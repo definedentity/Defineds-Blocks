@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "definedsblocks:block/flowery_mossy_course_dirt"
+    "all": "definedsblocks:block/mossy_coarse_dirt"
   }
 }

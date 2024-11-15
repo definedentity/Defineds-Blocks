@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "definedsblocks:flowery_mossy_course_dirt"
+          "name": "definedsblocks:mossy_coarse_dirt"
         }
       ],
       "conditions": [

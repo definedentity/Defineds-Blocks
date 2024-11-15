@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "definedsblocks:flowery_mossy_course_dirt_from_dirt_stonecutting"
+      "definedsblocks:mossy_coarse_dirt_from_dirt_stonecutting"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "definedsblocks:flowery_mossy_course_dirt_from_dirt_stonecutting"
+        "recipe": "definedsblocks:mossy_coarse_dirt_from_dirt_stonecutting"
       }
     }
   },
