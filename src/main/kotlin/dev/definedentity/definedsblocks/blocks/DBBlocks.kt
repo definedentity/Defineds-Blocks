@@ -7,5 +7,6 @@ object DBBlocks {
         DefinedsBlocks.LOGGER.info("Registering blocks...")
         MossyBlocks.init()
         FuturaBlocks.init()
+        GlassBlocks.init()
     }
 }
