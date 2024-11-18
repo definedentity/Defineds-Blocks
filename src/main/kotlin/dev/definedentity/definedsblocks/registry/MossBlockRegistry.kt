@@ -24,22 +24,39 @@ object MossBlockRegistry {
         name: String, englishName: String, type: MossBlockType, blockSupplier: (BlockBehaviour.Properties) -> T
     ): BlockEntry<T> {
         return REGISTRATE.`object`(name).block(blockSupplier).lang(englishName).simpleItem()
-            .properties { p -> p.requiresCorrectToolForDrops().strength(1.5f, 6.0f) }.initialProperties(Material.STONE)
-            .apply {
+            .properties { p -> p.requiresCorrectToolForDrops().strength(1.5f, 6.0f) }.apply {
                 when (type) {
                     MossBlockType.DIRT -> {
-                        recipe { ctx, prov -> prov.stonecutting(DataIngredient.stacks(Blocks.DIRT.asItem().defaultInstance)) { ctx.get() } }
-                            .tag(BlockTags.DIRT, BlockTags.MINEABLE_WITH_SHOVEL)
+                        recipe { ctx, prov ->
+                            prov.stonecutting(
+                                DataIngredient.stacks(Blocks.DIRT.asItem().defaultInstance)
+                            ) {
+                                ctx.get()
+                            }
+                        }.tag(BlockTags.DIRT, BlockTags.MINEABLE_WITH_SHOVEL).initialProperties(Material.DIRT)
                     }
 
                     MossBlockType.DEEPSLATE -> {
-                        recipe { ctx, prov -> prov.stonecutting(DataIngredient.stacks(Blocks.DEEPSLATE.asItem().defaultInstance)) { ctx.get() } }
-                            .tag(BlockTags.STONE_BRICKS, BlockTags.MINEABLE_WITH_PICKAXE)
+                        recipe { ctx, prov ->
+                            prov.stonecutting(
+                                DataIngredient.stacks(Blocks.DEEPSLATE.asItem().defaultInstance)
+                            ) {
+                                ctx.get()
+                            }
+                        }.tag(BlockTags.STONE_BRICKS, BlockTags.MINEABLE_WITH_PICKAXE).initialProperties(Material.STONE)
+
                     }
 
                     MossBlockType.STONE_BRICKS -> {
-                        recipe { ctx, prov -> prov.stonecutting(DataIngredient.stacks(Blocks.MOSSY_STONE_BRICKS.asItem().defaultInstance)) { ctx.get() } }
-                            .tag(BlockTags.STONE_BRICKS, BlockTags.MINEABLE_WITH_PICKAXE)
+                        recipe { ctx, prov ->
+                            prov.stonecutting(
+                                DataIngredient.stacks(
+                                    Blocks.MOSSY_STONE_BRICKS.asItem().defaultInstance
+                                )
+                            ) {
+                                ctx.get()
+                            }
+                        }.tag(BlockTags.STONE_BRICKS, BlockTags.MINEABLE_WITH_PICKAXE).initialProperties(Material.STONE)
                     }
                 }
             }.register()

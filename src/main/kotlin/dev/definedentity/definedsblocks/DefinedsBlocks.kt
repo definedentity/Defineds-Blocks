@@ -3,7 +3,6 @@ package dev.definedentity.definedsblocks
 import com.tterrag.registrate.Registrate
 import dev.definedentity.definedsblocks.blocks.DBBlocks
 import dev.definedentity.definedsblocks.blocks.MossyBlocks
-import dev.definedentity.definedsblocks.registry.BlockRegistry
 import dev.definedentity.definedsblocks.utils.DBIdentifier
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
@@ -17,9 +16,10 @@ class DefinedsBlocks : ModInitializer {
 
         val REGISTRATE = Registrate.create(MOD_ID)
 
-        val ITEM_GROUP = FabricItemGroupBuilder.build(DBIdentifier("general")) {
-            MossyBlocks.MOSSIER_STONE_BRICKS.get().asItem().defaultInstance
-        }
+        val ITEM_GROUP =
+            FabricItemGroupBuilder.build(DBIdentifier("general")) {
+                MossyBlocks.MOSSIER_STONE_BRICKS.get().asItem().defaultInstance
+            }
     }
 
     override fun onInitialize() {
