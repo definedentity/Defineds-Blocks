@@ -11,7 +11,8 @@ This is a fabric mod that adds a bunch of my favourite blocks.
 - Livingwood, livingrock, etc. from Botania
 
 ## Credits
-This mod use textures from:
+
+- [MikoTheBoi](https://github.com/MikoTheBoi) for mossy blocks textures
 - [Applied-Energistics-2](https://github.com/AppliedEnergistics/Applied-Energistics-2)
 - [Botania](https://github.com/VazkiiMods/Botania)
 
