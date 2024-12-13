@@ -1,6 +1,6 @@
 package dev.definedentity.definedsblocks.client
 
-import dev.definedentity.definedsblocks.blocks.FuturaBlocks
+import dev.definedentity.definedsblocks.blocks.FutureBlocks
 import dev.definedentity.definedsblocks.blocks.GlassBlocks
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
@@ -14,7 +14,7 @@ class DefinedsBlocksClient : ClientModInitializer {
 
     fun renderTranslucentBlock() {
         val blocks = listOf<Block>(
-            FuturaBlocks.FUTURA_BLOCK.get(),
+            FutureBlocks.FUTURA_BLOCK.get(),
             GlassBlocks.MANA_GLASS.get(),
             GlassBlocks.ELF_GLASS.get(),
         )

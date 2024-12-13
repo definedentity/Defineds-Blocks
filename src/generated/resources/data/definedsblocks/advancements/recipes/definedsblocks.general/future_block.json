@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "definedsblocks:futura_block"
+      "definedsblocks:future_block"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "definedsblocks:futura_block"
+        "recipe": "definedsblocks:future_block"
       }
     }
   },

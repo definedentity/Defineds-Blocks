@@ -1,6 +1,6 @@
-package dev.definedentity.definedsblocks.blocks.futura_blocks
+package dev.definedentity.definedsblocks.blocks.future_blocks
 
-import dev.definedentity.definedsblocks.blocks.FuturaBlocks
+import dev.definedentity.definedsblocks.blocks.FutureBlocks
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.util.StringRepresentable
@@ -11,9 +11,9 @@ import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
 import net.minecraft.world.level.block.state.properties.EnumProperty
 
-class FuturaBlock(properties: Properties) : Block(properties) {
+class FutureBlock(properties: Properties) : Block(properties) {
     companion object {
-        val ID = "futura_block"
+        val ID = "future_block"
         val FUTURE_BLOCK_TYPE = EnumProperty.create("type", FutureBlockType::class.java)
     }
 
@@ -74,6 +74,6 @@ class FuturaBlock(properties: Properties) : Block(properties) {
     }
 
     fun isFutureBlock(level: LevelAccessor, x: Int, y: Int, z: Int): Boolean {
-        return level.getBlockState(BlockPos(x, y, z)).`is`(FuturaBlocks.FUTURA_BLOCK.get())
+        return level.getBlockState(BlockPos(x, y, z)).`is`(FutureBlocks.FUTURA_BLOCK.get())
     }
 }
