@@ -13,11 +13,12 @@ class DefinedsBlocksClient : ClientModInitializer {
     }
 
     fun renderTranslucentBlock() {
-        val blocks = listOf<Block>(
-            FutureBlocks.FUTURA_BLOCK.get(),
-            GlassBlocks.MANA_GLASS.get(),
-            GlassBlocks.ELF_GLASS.get(),
-        )
+        val blocks =
+            listOf<Block>(
+                FutureBlocks.FUTURA_BLOCK.get(),
+                GlassBlocks.MANA_GLASS.get(),
+                GlassBlocks.ELF_GLASS.get(),
+            )
 
         blocks.forEach { BlockRenderLayerMap.INSTANCE.putBlock(it, RenderType.translucent()) }
     }
